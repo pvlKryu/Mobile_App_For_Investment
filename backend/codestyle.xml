@@ -1,0 +1,87 @@
+<code_scheme name="CodeStyle" version="173">
+    <option name="AUTODETECT_INDENTS" value="false"/>
+    <option name="LINE_SEPARATOR" value="&#xA;"/>
+    <option name="RIGHT_MARGIN" value="100"/>
+    <option name="SOFT_MARGINS" value="100"/>
+    <GroovyCodeStyleSettings>
+        <option name="USE_FQ_CLASS_NAMES_IN_JAVADOC" value="false"/>
+    </GroovyCodeStyleSettings>
+    <HTMLCodeStyleSettings>
+        <option name="HTML_ENFORCE_QUOTES" value="true"/>
+    </HTMLCodeStyleSettings>
+    <JavaCodeStyleSettings>
+        <option name="CLASS_NAMES_IN_JAVADOC" value="3"/>
+        <option name="USE_SINGLE_CLASS_IMPORTS" value="false"/>
+        <option name="CLASS_COUNT_TO_USE_IMPORT_ON_DEMAND" value="1"/>
+        <option name="NAMES_COUNT_TO_USE_IMPORT_ON_DEMAND" value="1"/>
+        <option name="PACKAGES_TO_USE_IMPORT_ON_DEMAND"/>
+        <option name="IMPORT_LAYOUT_TABLE">
+            <value>
+                <emptyLine/>
+                <package name="java" withSubpackages="true" static="false"/>
+                <emptyLine/>
+                <package name="javax" withSubpackages="true" static="false"/>
+                <emptyLine/>
+                <package name="java" withSubpackages="true" static="true"/>
+                <package name="javax" withSubpackages="true" static="true"/>
+                <emptyLine/>
+                <package name="org.slf4j" withSubpackages="true" static="false"/>
+                <package name="org.log4j" withSubpackages="true" static="false"/>
+                <emptyLine/>
+                <package name="" withSubpackages="true" static="false"/>
+                <emptyLine/>
+                <package name="" withSubpackages="true" static="true"/>
+                <emptyLine/>
+                <package name="org.junit" withSubpackages="true" static="false"/>
+                <package name="org.assertj" withSubpackages="true" static="false"/>
+                <emptyLine/>
+                <package name="org.junit" withSubpackages="true" static="true"/>
+                <package name="org.assertj" withSubpackages="true" static="true"/>
+                <emptyLine/>
+            </value>
+        </option>
+        <option name="JD_ALIGN_PARAM_COMMENTS" value="false"/>
+        <option name="JD_ALIGN_EXCEPTION_COMMENTS" value="false"/>
+        <option name="JD_ADD_BLANK_AFTER_PARM_COMMENTS" value="true"/>
+        <option name="JD_P_AT_EMPTY_LINES" value="false"/>
+    </JavaCodeStyleSettings>
+    <Properties>
+        <option name="KEEP_BLANK_LINES" value="true"/>
+    </Properties>
+    <XML>
+        <option name="XML_ATTRIBUTE_WRAP" value="4"/>
+        <option name="XML_KEEP_BLANK_LINES" value="1"/>
+    </XML>
+    <codeStyleSettings language="JAVA">
+        <option name="KEEP_BLANK_LINES_IN_DECLARATIONS" value="1"/>
+        <option name="KEEP_BLANK_LINES_IN_CODE" value="1"/>
+        <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="1"/>
+        <option name="BLANK_LINES_BEFORE_PACKAGE" value="1"/>
+        <option name="BLANK_LINES_AROUND_FIELD" value="1"/>
+        <option name="BLANK_LINES_AFTER_CLASS_HEADER" value="1"/>
+        <option name="BLANK_LINES_BEFORE_CLASS_END" value="1"/>
+        <option name="ALIGN_MULTILINE_BINARY_OPERATION" value="true"/>
+        <option name="ALIGN_MULTILINE_ASSIGNMENT" value="true"/>
+        <option name="ALIGN_MULTILINE_ARRAY_INITIALIZER_EXPRESSION" value="true"/>
+        <option name="CALL_PARAMETERS_WRAP" value="5"/>
+        <option name="CALL_PARAMETERS_LPAREN_ON_NEXT_LINE" value="true"/>
+        <option name="METHOD_PARAMETERS_WRAP" value="5"/>
+        <option name="METHOD_PARAMETERS_LPAREN_ON_NEXT_LINE" value="true"/>
+        <option name="METHOD_PARAMETERS_RPAREN_ON_NEXT_LINE" value="true"/>
+        <option name="METHOD_CALL_CHAIN_WRAP" value="5"/>
+        <option name="KEEP_SIMPLE_LAMBDAS_IN_ONE_LINE" value="true"/>
+        <indentOptions>
+            <option name="CONTINUATION_INDENT_SIZE" value="4"/>
+        </indentOptions>
+    </codeStyleSettings>
+    <codeStyleSettings language="JSON">
+        <indentOptions>
+            <option name="INDENT_SIZE" value="4"/>
+            <option name="CONTINUATION_INDENT_SIZE" value="4"/>
+        </indentOptions>
+    </codeStyleSettings>
+    <codeStyleSettings language="XML">
+        <option name="RIGHT_MARGIN" value="120"/>
+        <option name="SOFT_MARGINS" value="120"/>
+    </codeStyleSettings>
+</code_scheme>

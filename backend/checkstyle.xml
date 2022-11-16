@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+        "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+        "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+
+    <property name="fileExtensions" value="java, properties, xml"/>
+
+    <!-- See https://checkstyle.org/config_filefilters.html -->
+    <module name="BeforeExecutionExclusionFileFilter">
+        <property name="fileNamePattern" value="module\-info\.java$"/>
+    </module>
+
+    <!-- See https://checkstyle.org/config_sizes.html -->
+    <module name="FileLength"/>
+
+    <!-- See https://checkstyle.org/config_whitespace.html -->
+    <module name="FileTabCharacter"/>
+
+    <!-- See https://checkstyle.org/config_misc.html -->
+    <module name="NewlineAtEndOfFile"/>
+    <module name="Translation"/>
+    <module name="RegexpSingleline">
+        <property name="format" value="\s+$"/>
+        <property name="minimum" value="0"/>
+        <property name="maximum" value="0"/>
+        <property name="message" value="Line has trailing spaces."/>
+    </module>
+
+    <!-- See https://checkstyle.org/config_header.html   -->
+    <!-- <module name="Header"> -->
+    <!--   <property name="headerFile" value="${checkstyle.header.file}"/> -->
+    <!--   <property name="fileExtensions" value="java"/> -->
+    <!-- </module> -->
+
+    <module name="TreeWalker">
+        <!-- See https://checkstyle.org/config_javadoc.html -->
+        <!--<module name="InvalidJavadocPosition"/>-->
+        <module name="JavadocStyle">
+            <property name="checkFirstSentence" value="false"/>
+        </module>
+
+        <!-- See https://checkstyle.org/config_naming.html -->
+        <module name="AbbreviationAsWordInName">
+            <property name="allowedAbbreviations" value="{KiB, MiB, GiB, TiB, SQLXML, setSQLXML}"/>
+        </module>
+        <module name="ConstantName">
+            <property name="format" value="^KiB?$|^MiB?$|^GiB?$|^TiB?$|^log?$|^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$"/>
+        </module>
+        <module name="LocalFinalVariableName"/>
+        <module name="LocalVariableName"/>
+        <module name="MemberName"/>
+        <module name="MethodName"/>
+        <module name="PackageName"/>
+        <module name="ParameterName"/>
+        <module name="StaticVariableName"/>
+        <module name="TypeName">
+            <property name="format" value="^[UVR]?[0-9_]*(__)?[a-zA-Z0-9]*$"/>
+        </module>
+
+        <!-- See https://checkstyle.org/config_import.html -->
+        <module name="IllegalImport"/>
+        <module name="RedundantImport"/>
+        <module name="UnusedImports">
+            <property name="processJavadoc" value="true"/>
+        </module>
+
+        <!-- See https://checkstyle.org/config_sizes.html -->
+        <module name="LineLength">
+            <property name="max" value="120"/>
+        </module>
+        <module name="MethodLength">
+            <property name="max" value="100"/>
+        </module>
+        <module name="ParameterNumber">
+            <property name="max" value="6"/>
+            <property name="tokens" value="METHOD_DEF"/>
+        </module>
+
+        <!-- See https://checkstyle.org/config_whitespace.html -->
+        <module name="EmptyForIteratorPad"/>
+        <module name="GenericWhitespace"/>
+        <module name="EmptyLineSeparator">
+            <property name="allowNoEmptyLineBetweenFields" value="false"/>
+            <property name="allowMultipleEmptyLines" value="false"/>
+            <property name="allowMultipleEmptyLinesInsideClassMembers" value="false"/>
+        </module>
+        <module name="MethodParamPad"/>
+        <module name="NoWhitespaceAfter"/>
+        <module name="NoWhitespaceBefore"/>
+
+        <!--<module name="SeparatorWrap"/>-->
+
+        <module name="SeparatorWrap">
+            <property name="tokens" value="DOT"/>
+            <property name="option" value="nl"/>
+        </module>
+        <module name="SeparatorWrap">
+            <property name="tokens" value="COMMA, LPAREN"/>
+            <property name="option" value="eol"/>
+        </module>
+
+        <!--need take time-->
+        <!--<module name="OperatorWrap"/>-->
+        <!--<module name="ParenPad"/>-->
+        <!--<module name="TypecastParenPad"/>-->
+        <!--<module name="WhitespaceAfter"/>-->
+        <!--<module name="WhitespaceAround"/>-->
+
+        <!-- See https://checkstyle.org/config_modifiers.html -->
+        <module name="ModifierOrder"/>
+
+        <!-- See https://checkstyle.org/config_blocks.html -->
+        <module name="AvoidNestedBlocks"/>
+        <module name="EmptyBlock"/>
+        <module name="EmptyCatchBlock"/>
+        <module name="LeftCurly"/>
+        <module name="NeedBraces"/>
+        <module name="RightCurly"/>
+
+        <!-- See https://checkstyle.org/config_coding.html -->
+        <module name="EmptyStatement"/>
+        <module name="EqualsHashCode"/>
+        <module name="IllegalInstantiation"/>
+        <!--<module name="InnerAssignment"/>-->
+        <!--<module name="MagicNumber"/>-->
+        <module name="MissingSwitchDefault"/>
+        <module name="MultipleVariableDeclarations"/>
+        <module name="SimplifyBooleanExpression"/>
+        <module name="SimplifyBooleanReturn"/>
+        <module name="DeclarationOrder">
+            <property name="ignoreConstructors" value="true"/>
+            <property name="ignoreModifiers" value="true"/>
+        </module>
+        <module name="DefaultComesLast"/>
+        <!--<module name="ExplicitInitialization"/>-->
+        <module name="MissingSwitchDefault"/>
+        <module name="NoClone"/>
+        <module name="NoFinalizer"/>
+        <module name="OneStatementPerLine"/>
+        <module name="ParameterAssignment"/>
+        <module name="StringLiteralEquality"/>
+        <module name="UnnecessaryParentheses"/>
+
+        <!-- See https://checkstyle.org/config_design.html -->
+        <module name="VisibilityModifier"/>
+
+        <!-- See https://checkstyle.org/config_misc.html -->
+        <module name="ArrayTypeStyle"/>
+        <module name="CommentsIndentation"/>
+        <module name="TrailingComment"/>
+        <!--<module name="UpperEll"/>-->
+
+    </module>
+
+</module>
