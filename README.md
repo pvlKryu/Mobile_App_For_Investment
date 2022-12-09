@@ -18,7 +18,7 @@ This assembly (V.2) implements the almost complete functionality of the investme
 
 # Short review
 This application is in Russian, aimed at Russian-speaking customers </br>
-Below are some screenshots of the application, for a more detailed description of the functionality and screenshots, see the wiki </br>
+Below are some screenshots of the application, for a more detailed description of the functionality and screenshots, see the [wiki](https://github.com/pvlKryu/Mobile_App_For_Investment/wiki) </br>
 1) The portfolio contains purchased shares. At the top is the portfolio balance. Customer has an opportunity to:
 - Change balance
 - View Selected Stocks
