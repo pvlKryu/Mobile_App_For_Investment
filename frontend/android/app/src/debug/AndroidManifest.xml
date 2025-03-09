@@ -4,5 +4,10 @@
          the Flutter tool needs it to communicate with the running application
          to allow setting breakpoints, to provide hot reload, etc.
     -->
+     <application
+    ...
+    android:label="АТБ-Инвест"
+    ...
+>
     <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

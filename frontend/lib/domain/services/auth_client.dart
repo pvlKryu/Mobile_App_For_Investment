@@ -11,7 +11,7 @@ class AuthClient {
     String email,
     String password,
   ) async {
-    final url = Uri.parse("http://18.219.109.109:8080/client/registration");
+    final url = Uri.parse("http://atb-api.ru:8080/client/registration");
     bool result = false;
     final parameters = <String, String>{
       'name': name,
@@ -25,12 +25,12 @@ class AuthClient {
           },
           body: jsonEncode(parameters));
       // Сообщения в консоль для удобства отладки:
-      // print("Регистрация пользователя:");
-      // print("Name - $name");
-      // print("Email - $email");
-      // print("Password - $password");
-      // print("Response status: ${response.statusCode}");
-      // print("Response body: ${response.body}");
+      print("Регистрация пользователя:");
+      print("Name - $name");
+      print("Email - $email");
+      print("Password - $password");
+      print("Response status: ${response.statusCode}");
+      print("Response body: ${response.body}");
       // Если все ок:
       if (response.statusCode == 200) {
         result = true;
@@ -46,7 +46,7 @@ class AuthClient {
   // ignore: body_might_complete_normally_nullable
   Future<User?> userLogin(String token) async {
     {
-      final url = Uri.parse("http://18.219.109.109:8080/client/profile");
+      final url = Uri.parse("http://atb-api.ru:8080/client/profile");
       try {
         final response = await http.get(url, headers: <String, String>{
           // Передаем полученный токен в заголовке:
@@ -54,9 +54,9 @@ class AuthClient {
           'Content-Type': 'application/json',
         });
         // Сообщения в консоль для удобства отладки:
-        // print("Авторизация пользователя:");
-        // print("Response status: ${response.statusCode}");
-        // print("Response body: ${response.body}");
+        print("Авторизация пользователя:");
+        print("Response status: ${response.statusCode}");
+        print("Response body: ${response.body}");
 
         // Возвращаем пользователя
         if (response.body.isNotEmpty) {
@@ -78,7 +78,7 @@ class AuthClient {
         'email': email,
         'password': password,
       };
-      final url = Uri.parse("http://18.219.109.109:8080/client/profile");
+      final url = Uri.parse("http://atb-api.ru:8080/client/profile");
 
       try {
         final response = await http.put(url,
@@ -89,9 +89,9 @@ class AuthClient {
             },
             body: jsonEncode(parameters));
         // Сообщения в консоль для удобства отладки:
-        // print("Изменение данных пользователя:");
-        // print("Response status: ${response.statusCode}");
-        // print("Response body: ${response.body}");
+        print("Изменение данных пользователя:");
+        print("Response status: ${response.statusCode}");
+        print("Response body: ${response.body}");
 
         // Возвращаем пользователя
         if (response.body.isNotEmpty) {

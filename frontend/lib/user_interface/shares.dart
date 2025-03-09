@@ -32,23 +32,22 @@ class _SharesState extends State<Shares> {
                 onPressed: () {},
                 child: const Text('Сортировка'),
               ),
-              Padding(
-                  padding: const EdgeInsets.only(left: 80),
-                  child: TextButton(
-                    style: TextButton.styleFrom(
-                      textStyle: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    onPressed: () {
-                      sorting = true;
-                      widget.shares
-                          .sort((a, b) => a.price!.compareTo(b.price!));
-                      sorting = false;
-                    },
-                    child: const Text('По цене'),
-                  )),
+              const Spacer(),
+              TextButton(
+                style: TextButton.styleFrom(
+                  textStyle: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                onPressed: () {
+                  sorting = true;
+                  widget.shares
+                      .sort((a, b) => a.price!.compareTo(b.price!));
+                  sorting = false;
+                },
+                child: const Text('По цене'),
+              ),
               TextButton(
                 style: TextButton.styleFrom(
                   textStyle: const TextStyle(

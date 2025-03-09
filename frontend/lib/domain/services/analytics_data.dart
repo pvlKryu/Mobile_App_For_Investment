@@ -27,7 +27,7 @@ class AnalyticsData {
   }
 
   Future<double> getCurrencyIncomeData(String token) async {
-    final url = Uri.parse("http://18.219.109.109:8080/client/income");
+    final url = Uri.parse("http://atb-api.ru:8080/client/income");
     double income = 1;
     try {
       var response = await http.get(url, headers: <String, String>{
@@ -39,8 +39,8 @@ class AnalyticsData {
         dynamic responseBody = response.body;
         income = double.parse(responseBody);
       }
-      // print("Получение дохода в рублях");
-      // print(income);
+      print("Получение дохода в рублях");
+      print(income);
       return income;
     } catch (error) {
       print("Error - $error");
@@ -49,7 +49,7 @@ class AnalyticsData {
   }
 
   Future<double> getAbsoluteIncomeData(String token) async {
-    final url = Uri.parse("http://18.219.109.109:8080/client/percentageIncome");
+    final url = Uri.parse("http://atb-api.ru:8080/client/percentageIncome");
     double income = 1;
     try {
       var response = await http.get(url, headers: <String, String>{
@@ -61,8 +61,8 @@ class AnalyticsData {
         dynamic responseBody = response.body;
         income = double.parse(responseBody);
       }
-      // print("Получение дохода в %");
-      // print(income);
+      print("Получение дохода в %");
+      print(income);
       return income;
     } catch (error) {
       print("Error - $error");

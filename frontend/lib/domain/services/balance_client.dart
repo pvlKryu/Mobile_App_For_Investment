@@ -6,7 +6,7 @@ import 'dart:convert';
 class BalanceClient {
   // Запрос на получение баланса
   Future<double> getUserBalance(String basicAuth) async {
-    final url = Uri.parse("http://18.219.109.109:8080/client/balance");
+    final url = Uri.parse("http://atb-api.ru:8080/client/balance");
 
     double balance = 0;
     try {
@@ -16,10 +16,10 @@ class BalanceClient {
         'Content-Type': 'application/json',
       });
       // Сообщения в консоль для удобства отладки:
-      // print("Получение баланса пользователя:");
-      // print('Basic - $basicAuth');
-      // print("Response status: ${response.statusCode}");
-      // print("Response body: ${response.body}");
+      print("Получение баланса пользователя:");
+      print('Basic - $basicAuth');
+      print("Response status: ${response.statusCode}");
+      print("Response body: ${response.body}");
 
       // Если все ок:
       if (response.statusCode == 200) {
@@ -46,7 +46,7 @@ class BalanceClient {
     double sum,
     String token,
   ) async {
-    final url = Uri.parse("http://18.219.109.109:8080/client/balance");
+    final url = Uri.parse("http://atb-api.ru:8080/client/balance");
     bool result = false;
     final parameters = <String, dynamic>{
       'typeOfOperation': type,
@@ -59,9 +59,9 @@ class BalanceClient {
             'Authorization': token,
           },
           body: jsonEncode(parameters));
-      // print("Изменение баланса пользователя:");
-      // print("Response status: ${response.statusCode}");
-      // print("Response body: ${response.body}");
+      print("Изменение баланса пользователя:");
+      print("Response status: ${response.statusCode}");
+      print("Response body: ${response.body}");
       // Если все ок:
       if (response.statusCode == 200) {
         result = true;

@@ -14,10 +14,10 @@ Future<double> getUserBalance(String basicAuth) async {
       'Content-Type': 'application/json',
     });
     // Сообщения в консоль для удобства отладки:
-    // print("Получение баланса пользователя:");
-    // print('Basic - $basicAuth');
-    // print("Response status: ${response.statusCode}");
-    // print("Response body: ${response.body}");
+    print("Получение баланса пользователя:");
+    print('Basic - $basicAuth');
+    print("Response status: ${response.statusCode}");
+    print("Response body: ${response.body}");
 
     // Если все ок:
     if (response.statusCode == 200) {

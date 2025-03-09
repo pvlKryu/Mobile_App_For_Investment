@@ -9,7 +9,7 @@ class Transaction {
     int amount,
     String token,
   ) async {
-    final url = Uri.parse("http://18.219.109.109:8080/transaction/buy");
+    final url = Uri.parse("http://atb-api.ru:8080/transaction/buy");
     bool result = false;
     final parameters = <String, dynamic>{
       'figi': figi,
@@ -23,9 +23,9 @@ class Transaction {
           },
           body: jsonEncode(parameters));
       // Сообщения в консоль для удобства отладки:
-      // print("Покупка акции:");
-      // print("Response status: ${response.statusCode}");
-      // print("Response body: ${response.body}");
+      print("Покупка акции:");
+      print("Response status: ${response.statusCode}");
+      print("Response body: ${response.body}");
       // Если все ок:
       if (response.statusCode == 200) {
         result = true;
@@ -43,7 +43,7 @@ class Transaction {
     int amount,
     String token,
   ) async {
-    final url = Uri.parse("http://18.219.109.109:8080/transaction/sell");
+    final url = Uri.parse("http://atb-api.ru:8080/transaction/sell");
     bool result = false;
     final parameters = <String, dynamic>{
       'figi': figi,
@@ -57,9 +57,9 @@ class Transaction {
           },
           body: jsonEncode(parameters));
       // Сообщения в консоль для удобства отладки:
-      // print("Продажа акции:");
-      // print("Response status: ${response.statusCode}");
-      // print("Response body: ${response.body}");
+      print("Продажа акции:");
+      print("Response status: ${response.statusCode}");
+      print("Response body: ${response.body}");
       // Если все ок:
       if (response.statusCode == 200) {
         result = true;

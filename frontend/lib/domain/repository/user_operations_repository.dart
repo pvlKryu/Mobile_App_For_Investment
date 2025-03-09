@@ -21,7 +21,7 @@ class UserOperationsRepository {
 
   Future<List<Operation>> getUserShares() async {
     final url =
-        Uri.parse("http://18.219.109.109:8080/transaction/historyOfOperations");
+        Uri.parse("http://atb-api.ru:8080/transaction/historyOfOperations");
     Future<String?> stringFuture = _basicTokenProvider.getBasicToken();
     String? token = await stringFuture;
     token = token.toString();
@@ -33,8 +33,8 @@ class UserOperationsRepository {
       });
       final parsed = jsonDecode(utf8.decode(response.bodyBytes))
           .cast<Map<String, dynamic>>();
-      // print("Получение акций юзера:");
-      // print("Response status: ${response.statusCode}");
+      print("Получение акций юзера:");
+      print("Response status: ${response.statusCode}");
       return parsed.map<Operation>((json) => Operation.fromJson(json)).toList();
     } catch (error) {
       print("Error - $error");

@@ -17,10 +17,15 @@ class ShareCard extends StatelessWidget {
           fontSize: 22,
         ),
       ),
-      trailing: Text(
-        '${share.price ?? 'Нет данных'} ${share.currency}',
-        style: const TextStyle(fontSize: 21),
-      ),
+      trailing: (share.price != '')
+          ? Text(
+              '${double.parse((share.price)!.toStringAsFixed(2)) ?? 'Нет данных'} ${share.currency}',
+              style: const TextStyle(fontSize: 21),
+            )
+          : const Text(
+              ' Нет данных',
+              style: TextStyle(fontSize: 21),
+            ),
       onTap: () {
         Navigator.push(
           context,

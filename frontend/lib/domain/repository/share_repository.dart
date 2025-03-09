@@ -18,7 +18,7 @@ class SharesRepository {
   Stream<List<Share>> get stream => _controller.stream;
 
   Future<List<Share>> getShares() async {
-    final url = Uri.parse("http://18.219.109.109:8080/stocks");
+    final url = Uri.parse("http://atb-api.ru:8080/stocks?page=0&size=100");
     Future<String?> stringFuture = _basicTokenProvider.getBasicToken();
     String? token = await stringFuture;
     token = token.toString();
@@ -27,11 +27,12 @@ class SharesRepository {
         // Передаем полученный токен в заголовке:
         'Authorization': token,
         'Content-Type': 'application/json',
+    
       });
       final parsed = jsonDecode(utf8.decode(response.bodyBytes))
           .cast<Map<String, dynamic>>();
-      // print("Получение акций:");
-      // print("Response status: ${response.statusCode}");
+      print("Получение акций:");
+      print("Response status: ${response.statusCode}");
       return parsed.map<Share>((json) => Share.fromJson(json)).toList();
     } catch (error) {
       print("Error - $error");

@@ -9,7 +9,7 @@ class MoveFavorites {
     String figi,
     String token,
   ) async {
-    final url = Uri.parse("http://18.219.109.109:8080/stocks/favourite");
+    final url = Uri.parse("http://atb-api.ru:8080/stocks/favourite");
     bool result = false;
     final parameters = <String, dynamic>{
       'figi': figi,
@@ -41,7 +41,7 @@ class MoveFavorites {
     String figi,
     String token,
   ) async {
-    final url = Uri.parse("http://18.219.109.109:8080/stocks/favourite");
+    final url = Uri.parse("http://atb-api.ru:8080/stocks/favourite");
     bool result = false;
     final parameters = <String, dynamic>{
       'figi': figi,

@@ -37,7 +37,7 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           Row(
             children: [
-              Switch(
+              Switch.adaptive(
                 value: _value,
                 onChanged: (bool value) {
                   setState(() {

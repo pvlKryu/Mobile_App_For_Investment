@@ -19,7 +19,7 @@ class FavoriteSharesRepository {
   Stream<List<Share>> get stream => _controller.stream;
 
   Future<List<Share>> getFavoritesShares() async {
-    final url = Uri.parse("http://18.219.109.109:8080/stocks/favourite");
+    final url = Uri.parse("http://atb-api.ru:8080/stocks/favourite");
     Future<String?> stringFuture = _basicTokenProvider.getBasicToken();
     String? token = await stringFuture;
     token = token.toString();
@@ -31,8 +31,8 @@ class FavoriteSharesRepository {
       });
       final parsed = jsonDecode(utf8.decode(response.bodyBytes))
           .cast<Map<String, dynamic>>();
-      // print("Получение избранных акций юзера:");
-      // print("Response status: ${response.statusCode}");
+      print("Получение избранных акций юзера:");
+      print("Response status: ${response.statusCode}");
       return parsed.map<Share>((json) => Share.fromJson(json)).toList();
     } catch (error) {
       print("Error - $error");
